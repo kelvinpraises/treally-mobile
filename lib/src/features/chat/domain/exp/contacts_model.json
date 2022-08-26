@@ -1,0 +1,19 @@
+{
+  "chatUsers": [
+    {
+      "universalProfile": "0x0...1",
+      "name": "",
+      "imageUrl": ""
+    },
+    {
+      "universalProfile": "0x0...1",
+      "name": "",
+      "imageUrl": ""
+    },
+    {
+      "universalProfile": "0x0...1",
+      "name": "",
+      "imageUrl": ""
+    }
+  ]
+}

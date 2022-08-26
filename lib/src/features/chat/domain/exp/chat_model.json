@@ -1,0 +1,25 @@
+{
+  "peerId": "hash of fromUP and toUP",
+  "fromUniversalProfile": "0x0d...01",
+  "toUniversalProfile": "0x0j...02",
+  "messages": [
+    {
+      "messageEncryptionKeys": ["0x0...1", "0x0...2"],
+      "encryptedMessages": ["where are you now", "where are you now"],
+      "signature": "sss",
+      "timestamp": 404023113454
+    },
+    {
+      "messageEncryptionKeys": ["0x0...1", "0x0...2"],
+      "encryptedMessages": ["all right that's great", "all right that's great"],
+      "signature": "sss",
+      "timestamp": 404023113454
+    },
+    {
+      "messageEncryptionKeys": ["0x0...1", "0x0...2"],
+      "encryptedMessages": ["do get home quickly", "do get home quickly"],
+      "signature": "sss",
+      "timestamp": 404023113454
+    }
+  ]
+}

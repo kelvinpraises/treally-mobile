@@ -1,23 +1,23 @@
 import 'message_model.dart';
 
 class Chat {
-  List<Message>? message;
+  List<Message>? messages;
 
-  Chat({this.message});
+  Chat({this.messages});
 
   Chat.fromJson(Map<String, dynamic> json) {
-    if (json['message'] != null) {
-      message = <Message>[];
-      json['message'].forEach((v) {
-        message!.add(Message.fromJson(v));
+    if (json['messages'] != null) {
+      messages = <Message>[];
+      json['messages'].forEach((v) {
+        messages!.add(Message.fromJson(v));
       });
     }
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
-    if (message != null) {
-      data['message'] = message!.map((v) => v.toJson()).toList();
+    if (messages != null) {
+      data['messages'] = messages!.map((v) => v.toJson()).toList();
     }
     return data;
   }

@@ -1,22 +1,27 @@
 class Message {
-  List<String>? keys;
-  List<String>? message;
+  List<String>? messageEncryptionKeys;
+  List<String>? encryptedMessages;
   String? signature;
   int? timestamp;
 
-  Message({this.keys, this.message, this.signature, this.timestamp});
+  Message({
+    this.messageEncryptionKeys,
+    this.encryptedMessages,
+    this.signature,
+    this.timestamp,
+  });
 
   Message.fromJson(Map<String, dynamic> json) {
-    keys = json['keys'].cast<String>();
-    message = json['message'].cast<String>();
+    messageEncryptionKeys = json['messageEncryptionKeys'].cast<String>();
+    encryptedMessages = json['encryptedMessages'].cast<String>();
     signature = json['signature'];
     timestamp = json['timestamp'];
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
-    data['keys'] = keys;
-    data['message'] = message;
+    data['messageEncryptionKeys'] = messageEncryptionKeys;
+    data['encryptedMessages'] = encryptedMessages;
     data['signature'] = signature;
     data['timestamp'] = timestamp;
     return data;
