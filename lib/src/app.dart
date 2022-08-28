@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
+import 'features/Initialization/presentation/views/initial_view.dart';
 import 'features/chat/presentation/view/chat_contacts_view.dart';
 import 'features/settings/settings_controller.dart';
 import 'features/settings/settings_view.dart';
@@ -25,6 +26,9 @@ class MyApp extends StatelessWidget {
       animation: settingsController,
       builder: (BuildContext context, Widget? child) {
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          debugShowMaterialGrid: false,
+
           // Providing a restorationScopeId allows the Navigator built by the
           // MaterialApp to restore the navigation stack when a user leaves and
           // returns to the app after it has been killed while running in the
@@ -71,7 +75,7 @@ class MyApp extends StatelessWidget {
                   case ChatContactsView.routeName:
                     return const ChatContactsView();
                   default:
-                    return const ChatContactsView();
+                    return const InitialView();
                 }
               },
             );
