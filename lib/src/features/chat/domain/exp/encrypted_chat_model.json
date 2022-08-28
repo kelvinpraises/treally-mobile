@@ -1,0 +1,24 @@
+{
+  "ownerUniversalProfile": "0x0d...01",
+  "recipientUniversalProfile": "0x0j...02",
+  "encryptedMessages": [
+    {
+      "messageEncryptionKeys": ["0x0...1", "0x0...2"],
+      "encryptedMessages": ["where are you now", "where are you now"],
+      "encryptionMode": "",
+      "timestamp": 404023113454
+    },
+    {
+      "messageEncryptionKeys": ["0x0...1", "0x0...2"],
+      "encryptedMessages": ["all right that's great", "all right that's great"],
+      "encryptionMode": "",
+      "timestamp": 404023113454
+    },
+    {
+      "messageEncryptionKeys": ["0x0...1", "0x0...2"],
+      "encryptedMessages": ["do get home quickly", "do get home quickly"],
+      "encryptionMode": "",
+      "timestamp": 404023113454
+    }
+  ]
+}

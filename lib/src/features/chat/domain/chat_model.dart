@@ -1,24 +1,74 @@
+import 'dart:convert';
+
+import 'package:flutter/foundation.dart';
+
 import 'message_model.dart';
 
 class Chat {
-  List<Message>? messages;
+  const Chat({
+    required this.ownerUniversalProfile,
+    required this.recipientUniversalProfile,
+    this.messages,
+  });
 
-  Chat({this.messages});
+  final String ownerUniversalProfile;
+  final String recipientUniversalProfile;
+  final List<Message>? messages;
 
-  Chat.fromJson(Map<String, dynamic> json) {
-    if (json['messages'] != null) {
-      messages = <Message>[];
-      json['messages'].forEach((v) {
-        messages!.add(Message.fromJson(v));
-      });
-    }
+  Chat copyWith({
+    String? ownerUniversalProfile,
+    String? recipientUniversalProfile,
+    List<Message>? messages,
+  }) {
+    return Chat(
+      ownerUniversalProfile:
+          ownerUniversalProfile ?? this.ownerUniversalProfile,
+      recipientUniversalProfile:
+          recipientUniversalProfile ?? this.recipientUniversalProfile,
+      messages: messages ?? this.messages,
+    );
   }
 
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = <String, dynamic>{};
-    if (messages != null) {
-      data['messages'] = messages!.map((v) => v.toJson()).toList();
-    }
-    return data;
+  Map<String, dynamic> toMap() {
+    return {
+      'ownerUniversalProfile': ownerUniversalProfile,
+      'recipientUniversalProfile': recipientUniversalProfile,
+      'messages': messages?.map((x) => x.toMap()).toList(),
+    };
   }
+
+  factory Chat.fromMap(Map<String, dynamic> map) {
+    return Chat(
+      ownerUniversalProfile: map['ownerUniversalProfile'] ?? '',
+      recipientUniversalProfile: map['recipientUniversalProfile'] ?? '',
+      messages: map['messages'] != null
+          ? List<Message>.from(
+              map['messages']?.map((x) => Message.fromMap(x)))
+          : null,
+    );
+  }
+
+  String toJson() => json.encode(toMap());
+
+  factory Chat.fromJson(String source) => Chat.fromMap(json.decode(source));
+
+  @override
+  String toString() =>
+      'Chat(ownerUniversalProfile: $ownerUniversalProfile, recipientUniversalProfile: $recipientUniversalProfile, messages: $messages)';
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+
+    return other is Chat &&
+        other.ownerUniversalProfile == ownerUniversalProfile &&
+        other.recipientUniversalProfile == recipientUniversalProfile &&
+        listEquals(other.messages, messages);
+  }
+
+  @override
+  int get hashCode =>
+      ownerUniversalProfile.hashCode ^
+      recipientUniversalProfile.hashCode ^
+      messages.hashCode;
 }

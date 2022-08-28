@@ -1,19 +1,40 @@
 {
-  "chatUsers": [
+  "contact": [
     {
-      "universalProfile": "0x0...1",
+      "peerId": "hash of myUP and contactUP in lexicographic order",
+      "myUniversalProfile": "0x0d...01",
+      "contactUniversalProfile": "0x0j...02",
+      "messageEncryptionKeys": [""],
       "name": "",
-      "imageUrl": ""
+      "imageUrl": "",
+      "orbitDbChatRepo": {
+        "mine": "",
+        "contact": ""
+      }
     },
     {
-      "universalProfile": "0x0...1",
+      "peerId": "hash of myUP and contactUP in lexicographic order",
+      "myUniversalProfile": "0x0d...01",
+      "contactUniversalProfile": "0x0j...02",
+      "messageEncryptionKeys": [""],
       "name": "",
-      "imageUrl": ""
+      "imageUrl": "",
+      "orbitDbChatRepo": {
+        "mine": "",
+        "contact": ""
+      }
     },
     {
-      "universalProfile": "0x0...1",
+      "peerId": "hash of myUP and contactUP in lexicographic order",
+      "myUniversalProfile": "0x0d...01",
+      "contactUniversalProfile": "0x0j...02",
+      "messageEncryptionKeys": [""],
       "name": "",
-      "imageUrl": ""
+      "imageUrl": "",
+      "orbitDbChatRepo": {
+        "mine": "",
+        "contact": ""
+      }
     }
   ]
 }
