@@ -19,7 +19,7 @@ class Contacts {
 
   Map<String, dynamic> toMap() {
     return {
-      'contact': contact?.map((x) => x?.toMap())?.toList(),
+      'contact': contact?.map((x) => x.toMap()).toList(),
     };
   }
 
