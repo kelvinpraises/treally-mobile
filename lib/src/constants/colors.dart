@@ -3,12 +3,13 @@ import 'package:flutter/material.dart';
 // Colors
 const Color kWhite = Color(0xFFFFFFFF);
 const Color kBlack = Color(0xFF000000);
-const Color kAlmostBlack = Color(0xFF151515);
-const Color kGrey = Color(0xFF383838);
-const Color kBlueGrey100 = Color(0xFF84949E);
-const Color kBlueGrey200 = Color(0xFFA4B2BB);
-const Color kBlue100 = Color(0xFF461BC2);
-const Color kBlue200 = Color(0xFF4FB8FF);
+const Color kBlack2 = Color(0xFF494949);
+const Color kGray = Color(0xFFB5B5B5);
+const Color kGray2 = Color(0xFF8A8A8A);
+const Color kGray3 = Color(0xFFA9A9A9);
+const Color kLightOrange = Color(0xFFF5F3EF);
+const Color kGreen = Color(0xFF89C5A8);
+const Color kGreen2 = Color(0xFFD2FFE9);
 
 // Gradient
 const homeBgGradient = LinearGradient(

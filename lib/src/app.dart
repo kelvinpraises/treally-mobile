@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-import 'features/Initialization/presentation/views/initial_view.dart';
 import 'features/chat/presentation/view/chat_contacts_view.dart';
+import 'features/onboard/presentation/views/create_profile_view.dart';
+import 'features/onboard/presentation/views/import_profile_view.dart';
+import 'features/onboard/presentation/views/onboard_view.dart';
 import 'features/settings/settings_controller.dart';
 import 'features/settings/settings_view.dart';
 
@@ -74,8 +76,12 @@ class MyApp extends StatelessWidget {
                     return SettingsView(controller: settingsController);
                   case ChatContactsView.routeName:
                     return const ChatContactsView();
+                  case CreateProfileView.routeName:
+                    return const CreateProfileView();
+                  case ImportProfileView.routeName:
+                    return const ImportProfileView();
                   default:
-                    return const InitialView();
+                    return const OnboardView();
                 }
               },
             );

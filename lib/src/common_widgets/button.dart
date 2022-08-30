@@ -4,6 +4,7 @@ class Button extends StatelessWidget {
   final String label;
   final Function callback;
   final Color? color;
+  final Color? textColor;
   final double width;
 
   const Button({
@@ -11,6 +12,7 @@ class Button extends StatelessWidget {
     required this.label,
     required this.callback,
     this.color,
+    this.textColor,
     required this.width,
   }) : super(key: key);
 
@@ -31,7 +33,7 @@ class Button extends StatelessWidget {
         child: Text(
           label,
           style: const TextStyle(
-            color: Colors.black,
+            color: Colors.white,
             fontSize: 20.0,
             fontWeight: FontWeight.w700,
           ),
